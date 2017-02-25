@@ -9,7 +9,7 @@ Dette undervisningsmateriale tager udgangspunkt I Semmy Purewals Online kursus "
 
 Kursuet består af nogle videoer hvor Semmy gennemgår dele af javascript sproget og de man skal vide for at løse de opgaver der hører til hvert kapitel. Opgaverne i kapitlerne er både nogle øvelser du bare skal udføre i en browser (debug viduets console) og nogle opgaver det skal løses ved at skrive kode i en editor, f.eks Brackets eller WebStorm. 
 ![](images/bracketsScreen.png) ![](images/webstormScreen.png)
-Til opgaverne hører der et testscript, som du kører i browseren til at afprøve dit program. Efter hånden som din program besvarer opgaven bedre og bedre, bliver testen også mere og mere "rigtig" ![](images/jasminScreen.png).
+Til opgaverne hører der et testscript, som du kører i browseren til at afprøve dit program. Efter hånden som din program besvarer opgaven bedre og bedre, bliver testen også mere og mere "rigtig". ![](images/JasminScreen.png)
 
 Selve vidoerne må du spørge din lærer om at give dig adgang til at se.
 
