@@ -36,7 +36,7 @@ Selve vidoerne må du spørge din lærer om at give dig adgang til at se.
     - _6 Variables - Working with Number Expressions 00:07:03_
 + re-assigning variables
 #### practice
-    - _7 Variables - Summary & Practice Overview 00:01:49_
+ - _7 Variables - Summary & Practice Overview 00:01:49_
     
 > [Ingen test](./01-variables/), men øvelser 1-9 nederst i `readme.md`.
    
@@ -238,16 +238,16 @@ I sidste ende er jeg, din lærer, der jo, til at hjælpe.
  
  Nederst i `07-array-iterators/readme.md` er der ti opgaver hvor du skal bruge array-funktionerne på rigtige, virkelige, statistiske data:
  
-    >> - [ ] 1. How many baby names start with the letter 'z'?
-    >> - [ ] 2. How many baby names have the letter 'z' in them anywhere?
-    >> - [ ] 3. Create a new array that contains all of the names containing a 'w' with the first letter upper-case.
-    >> - [ ] 4. Do all of the names contain vowels?
-    >> - [ ] 5. Are there any names that have only two letters?
-    >> - [ ] 6. Is your name in the list?
-    >> - [ ] 7. Find the name that would come first alphabetically.
-    >> - [ ] 8. How many times does the letter 'z' appear in the list?
-    >> - [ ] 9. What is the maximum number of vowels in any name?
-    >> - [ ] 10. How many names have the maximum number of vowels that you found in the previous problem?
+ > - [ ] 1. How many baby names start with the letter 'z'?
+ > - [ ] 2. How many baby names have the letter 'z' in them anywhere?
+ > - [ ] 3. Create a new array that contains all of the names containing a 'w' with the first letter upper-case.
+ > - [ ] 4. Do all of the names contain vowels?
+ > - [ ] 5. Are there any names that have only two letters?
+ > - [ ] 6. Is your name in the list?
+ > - [ ] 7. Find the name that would come first alphabetically.
+ > - [ ] 8. How many times does the letter 'z' appear in the list?
+ > - [ ] 9. What is the maximum number of vowels in any name?
+ > - [ ] 10. How many names have the maximum number of vowels that you found in the previous problem?
 
 + tests
   [Kør test](07-arrays-iterators/runner.html)
