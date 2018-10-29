@@ -130,3 +130,4 @@ var isHTMLElement = function () {
 if(typeof(module) !== 'undefined' && module != null)  {      
     module.exports = {isDivisibleBy3, celsToFahr, fahrToCels, randUpTo, randBetween, 
     isSuit, isRank, isCard, isCapitalized, getHTMLText, isHTMLElement}
+}
