@@ -1,14 +1,21 @@
+// ### Practice
 
 // 1. What happens when you print out the value of a variable that you have
 // declared but you didn't define?
 
 console.log("Svaret på spørgsmål 1:")
+var myvar;
+console.log(myvar);
 
 // 2. Identifiers have some pretty specific rules in JavaScript. Experiment with
 // declaring variables using various symbols other than letters and numbers and see
 // when you get a Syntax Error.
 
 console.log("Svaret på spørgsmål 2:")
+var cheef1 = "";
+//var 1steMand;
+//var jule-slik = "nixen";
+//var Søren.Magnusson;
 
 // 3. Declare and define a variable that stores your name. Using that variable,
 // construct a new variable that represents a greeting by concatentating "Hello" in
@@ -16,11 +23,16 @@ console.log("Svaret på spørgsmål 2:")
 // variable, where "Semmy" is stored in another variable.
 
 console.log("3 ");
+var name = "Søren";
+var greeting = "Hi " + name;
+console.log(greeting);
 
 // 4. Using just the name variable from the previous question, create a more
 // complex greeting that looks like "Hello, Semmy!" and store that in a variable.
 
 console.log("4 ");
+var complexGreeting = "Hello, " + name + "!";
+console.log(complexGreeting);
 
 // 5. Create a variable that represents a worker's hourly wage. Create another
 // variable that represents the number of hours a worker has worked. Store values
@@ -28,6 +40,10 @@ console.log("4 ");
 // based on the number of hours worked and the hourly wage.
 
 console.log(5);
+var hourlyWage = 150;
+var nHours = 37;
+var weeklyWage = hourlyWage * nHours;
+console.log(weeklyWage);
 
 // 6. We've seen that variables can store strings and numbers. We've also seen that
 // when we have two strings the `+` operator means _concatenation_, whereas when we
@@ -36,6 +52,15 @@ console.log(5);
 // what you see.
 
 console.log("opgave 6")
+
+console.log( "3" + "7");
+console.log( "3" + 7);
+console.log( 3 + "7");
+
+var tre = "3";
+var syv = "7";
+console.log( tre + 7);
+console.log( 3 + syv);
 
 // 7. In the last example, we ended up with a long decimal number. We'd
 // like to round it off, but we don't know how to do that. The _Mozilla
@@ -65,7 +90,6 @@ console.log("opgave 8")
 // 9. Consider the following sequence of variable assignments.
 
 console.log("opgave 9")
-
 
 //         var tweet = "hello world!";
 //         var count = 0;

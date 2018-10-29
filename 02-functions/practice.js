@@ -1,5 +1,8 @@
-// Write a function that accepts two number arguments and returns their sum
-var add = function () {
+// (example) Write a function that accepts two number arguments and adds them
+// together.
+var add = function (a, b) {
+    var sum = a + b;
+    return sum;
 };
 
 
@@ -8,7 +11,9 @@ var add = function () {
 //
 //     var preTaxTotal = totalCost(5, 5.99); // 5 items at 5.99
 //     //=> 29.950000000000003
-var totalCost = function () {
+var totalCost = function (quantity, price) {
+    var total = quantity * price;
+    return total;
 };
 
 
@@ -20,7 +25,9 @@ var totalCost = function () {
 //
 //     cardString("queen", "hearts");
 //     //=> queen of hearts
-var cardString = function () {
+var cardString = function (rank, suit) {
+    var cardString = rank + " of " + suit;
+    return cardString;
 };
 
 
@@ -32,7 +39,9 @@ var cardString = function () {
 //
 //     openTag("div");
 //     //=> <div>
-var openTag = function () {
+var openTag = function (tag) {
+    var open = "<" + tag + ">";
+    return open;
 };
 
 
@@ -44,7 +53,9 @@ var openTag = function () {
 //
 //     closeTag("div");
 //     //=> </div>
-var closeTag = function () {
+var closeTag = function (tag) {
+    var close = "</" + tag + ">";
+    return close;
 };
 
 
@@ -61,7 +72,9 @@ var closeTag = function () {
 //
 // Although I won't be testing for this, your code should re-use the functions that
 // you created in the previous section.
-var toTagString = function () {
+var toTagString = function (tag, content) {
+    var result = openTag(tag) + content + closeTag(tag);
+    return result;
 };
 
 // for working in nodejs

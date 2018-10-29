@@ -1,3 +1,19 @@
+// helper functions that are used throughout
+var isString = function (val) {
+    return typeof val === "string";
+};
+
+var isHTMLElement = function (str) {
+    var openTag = str.substring(str.indexOf("<") + 1, str.indexOf(">"));
+    var closeTag = str.substring(str.lastIndexOf("</") + 2, str.lastIndexOf(">"));
+    return str.charAt(0) === "<" && str.charAt(str.length - 1) === ">" && openTag === closeTag;
+};
+
+var randUpTo = function (n) {
+    return Math.floor(Math.random() * n);
+};
+
+
 // We'll consider a password's strength to be "strong" if it is at least 10
 // characters long. If it's between 7 and 10 characters long, we'll consider it to
 // have "medium" strength, and if it's less than 7 characters, we'll say it is a
@@ -12,7 +28,18 @@
 //
 //     passwordStrength("helloone");
 //     //=> medium
-var passwordStrength = function () {
+var passwordStrength = function (password) {
+    var result;
+
+    if (password.length < 7) {
+        result = "weak";
+    } else if (password.length >= 7 && password.length < 10) {
+        result = "medium";
+    } else {
+        result = "strong";
+    }
+
+    return result;
 };
 
 
@@ -37,7 +64,53 @@ var passwordStrength = function () {
 //
 //      isLeapYear("hello");
 //      //=> THAT'S NOT A NUMBER!
-var isLeapYear = function () {
+// with nested if statements
+var isLeapYear = function (year) {
+    var result = false;
+
+    if (typeof year !== "number") {
+        throw "argument to isLeapYear must be a number";
+    }
+
+    if (year % 4 === 0) {
+        if (year % 100 === 0 && year % 400 !== 0) {
+            result = false;
+        } else {
+            result = true;
+        }
+    } else {
+        result = false;
+    }
+
+    return result;
+};
+
+// a flatter version
+isLeapYear = function (year) {
+    var result = false;
+
+    if (typeof year !== "number") {
+        throw "argument to isLeapYear must be a number";
+    }
+
+    if (year % 4 === 0 && year % 100 === 0 && year % 400 !== 0) {
+        result = false;
+    } else if (year % 4 === 0 && year % 100 === 0 && year % 400 === 0) {
+        result = true;
+    } else if (year % 4 === 0) {
+        result = true;
+    }
+
+    return result;
+};
+
+// the simplest version
+isLeapYear = function (year) {
+    if (typeof year !== "number") {
+        throw "argument to isLeapYear must be a number";
+    }
+
+    return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
 };
 
 
@@ -57,7 +130,18 @@ var isLeapYear = function () {
 //
 //      firstInDictionary("whale", 5, 10);
 //      //=> ALL THREE ARGS MUST BE STRINGS!
-var firstInDictionary = function () {
+var firstInDictionary = function (a, b, c) {
+    if (!isString(a) || !isString(b) || !isString(c)) {
+        throw "ALL THREE ARGS MUST BE STRINGS!";
+    }
+
+    if (a <= b && a <= c) {
+        return a;
+    } else if (b <= a && b <= c) {
+        return b;
+    } else {
+        return c;
+    }
 };
 
 
@@ -71,20 +155,47 @@ var firstInDictionary = function () {
 //
 //     getTagName("<p>this is wrong</div>");
 //     //=> Error: Not an HTML Element!
-var getTagName = function () {
+var getTagName = function (elt) {
+    if (!isHTMLElement(elt)) {
+        throw "Error: Not an HTML Element!";
+    }
+
+    return elt.slice(1, elt.indexOf(">"));
 };
 
 
 // Re-implement our improveTweet function so it can generate any of lol, omg,
 // lmao, and rofl.
-var improveTweet = function () {
+var improveTweet = function (tweet) {
+    // generate either 0, 1, 2, or 3 using the randUpTo function defined above
+    var random = randUpTo(4);
+    var result = tweet;
+    var expression;
+
+    if (random === 0) {
+        expression = "lol";
+    } else if (random === 1) {
+        expression = "omg";
+    } else if (random === 2) {
+        expression = "lmao";
+    } else {
+        expression = "rofl";
+    }
+
+    if (result.indexOf(expression) === -1 && result.indexOf(expression.toUpperCase()) === -1) {
+        result = result + " " + expression;
+    }
+
+    return result;
 };
 
 
 // Write a function called `isQuestion` that returns true if the input is a
 // string and it ends in a question mark. We'll use this function in the next
 // practice problem.
-var isQuestion = function () {
+var isQuestion = function (sentence) {
+    // this uses the helper isString function which you can find above
+    return isString(sentence) && sentence.charAt(sentence.length - 1) === "?";
 };
 
 
@@ -111,7 +222,31 @@ var isQuestion = function () {
 //
 //     magic8Ball("Is this a question?");
 //     //=> Signs point to yes
-var magic8Ball = function () {
+
+var magic8Ball = function (question) {
+    if (!isQuestion(question)) {
+        throw "THAT DOESN'T SOUND LIKE A QUESTION!";
+    }
+
+    // reuse the randUpTo function defined above
+    var number = randUpTo(4);
+    var result;
+
+    if (number === 0) {
+        result = "Yes!";
+    } else if (number === 1) {
+        result = "Definitely!";
+    } else if (number === 2) {
+        result = "Maybe...";
+    } else if (number === 3) {
+        result = "No :(";
+    } else {
+        // if our rand num generator is right, this
+        // should never happen
+        throw "Something went horribly wrong!";
+    }
+
+    return result;
 };
 
 
@@ -151,7 +286,16 @@ var magic8Ball = function () {
 //     var strWithInterjection = beginning + "-lol-" + end;
 //
 // You just have to generalize this to an arbitrary index and wrap it in a function.
-var interjectAt = function () {
+var interjectAt = function (interjection, index, tweet) {
+    if (!isString(interjection) || typeof index !== "number" || !isString(tweet)) {
+        throw "expected first arg to be a string, second arg to be a number and third arg to be a string";
+    }
+
+    if (index > tweet.length - 1) {
+        throw "the string doesn't have that many letters!";
+    }
+
+    return tweet.slice(0,index) + "-" + interjection + "-" + tweet.slice(index);
 };
 
 
@@ -159,8 +303,25 @@ var interjectAt = function () {
 // `randomInterjection` function consists of generating a random message and a
 // random location within the string, and then calling into the `interjectAt`
 // function with the appropriate arguments.
-var randomInterject = function () {
+
+var randomInterject = function (tweet) {
+    if (!isString(tweet)) {
+        throw "the input should be a string!";
+    }
+    // reuse the randUpTo function defined above
+    var randomMsgNum = randUpTo(2);
+    var randomIndex = randUpTo(tweet.length);
+    var result;
+
+    if (randomMsgNum === 0) {
+        result = interjectAt("-lol-", randomIndex, tweet);
+    } else {
+        result = interjectAt("-omg-", randomIndex, tweet);
+    }
+
+    return result;
 };
+
 
 // for working in nodejs 
 if(typeof(module) !== 'undefined' && module != null)  
@@ -168,7 +329,3 @@ if(typeof(module) !== 'undefined' && module != null)
     module.exports = {passwordStrength, isLeapYear, firstInDictionary, getTagName, improveTweet, isQuestion,
                     magic8Ball, interjectAt, randomInterject}
 }
-
-
-
-
