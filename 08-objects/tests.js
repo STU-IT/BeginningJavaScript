@@ -1,3 +1,6 @@
+var f = require('./practice.js');
+for (var e in f) {global[e] = f[e]};
+
 describe("#isUser", function () {
     it ("should return true if the argument is a user object, false otherwise", function () {
         expect(isUser({ "name":"Semmy Purewal", "screen_name":"semmypurewal" })).toBe(true);

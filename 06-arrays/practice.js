@@ -200,3 +200,6 @@ var mapToTags = function () {
 //
 var filterToLol = function () {
 };
+
+module.exports = {containsTwice, containsNTimes, atLeastOneEven, allStrings, containsAnyTwice,
+                    getValuesAppearingTwice, range, mapToTags, filterToLol};

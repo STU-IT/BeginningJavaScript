@@ -1,3 +1,6 @@
+var f = require('./practice.js');
+for (var e in f) {global[e] = f[e]};
+
 describe("#isVowel", function () {
     it ("should return true if the argument is a vowel, false otherwise", function () {
         expect(isVowel("a")).toBe(true);

@@ -128,3 +128,6 @@ var randomArray = function () {
 //
 var randomElements = function () {
 };
+
+module.exports = {reverse, flatten, sumOfMultiplesOf3And5, atLeastOneVowel, longestAwesomeTweet,elementsToContent,
+    randomArray, randomElements};

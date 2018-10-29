@@ -13,9 +13,9 @@ Til opgaverne hører der et testscript, som du kører i browseren til at afprøv
 
 Selve vidoerne må du spørge din lærer om at give dig adgang til at se.
 
-Søren siger: Det er fedt at bruge Visual Studio Code, og køre programmerne igennem node.js istaller derfor herfra:
-* https://nodejs.org/en/download/
-* https://code.visualstudio.com/download
+## Særligt om at bruge Node.js
+
+Kombinationen af _Visual Studio Code_ og _node.js_ giver et lækkert workflow, men kræver lidt tilpasning. Se [[README_nodejs.md]]
 
 ## Indhold
 

@@ -81,3 +81,5 @@ var userWithTweetsToDiv = function () {
 //
 var frequencies = function () {
 };
+
+module.exports = {isUser, userToDiv, userWithTweetsToDiv, frequencies};

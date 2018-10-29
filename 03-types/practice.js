@@ -1,6 +1,7 @@
 // Write a function called isDivisibleBy3 which returns `true` if a number is
 // divisible by 3, and `false` otherwise.
 var isDivisibleBy3 = function () {
+    return true;
 };
 
 
@@ -124,3 +125,6 @@ var getHTMLText = function () {
 // objects.
 var isHTMLElement = function () {
 };
+
+module.exports = {isDivisibleBy3, celsToFahr, fahrToCels, randUpTo, randBetween, 
+    isSuit, isRank, isCard, isCapitalized, getHTMLText, isHTMLElement}

@@ -1,3 +1,6 @@
+var f = require('./practice.js');
+for (var e in f) {global[e] = f[e]};
+
 describe("#isDivisibleBy3", function () {
     it ("should return true if the number is divisible by 3, false otherwise", function () {
         expect(isDivisibleBy3(3)).toBe(true);

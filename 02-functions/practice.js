@@ -64,4 +64,4 @@ var closeTag = function () {
 var toTagString = function () {
 };
 
-
+module.exports = {add, cardString, closeTag, openTag, toTagString, totalCost}

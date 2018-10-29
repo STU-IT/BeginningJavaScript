@@ -1,3 +1,6 @@
+var f = require('./practice.js');
+for (var e in f) {global[e] = f[e]};
+
 describe("#passwordStrength", function () {
     it ("should return the appropriate strength on the appropriate input", function () {
         expect(passwordStrength("hello")).toBe("weak");

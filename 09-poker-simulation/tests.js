@@ -1,3 +1,6 @@
+var f = require('./practice.js');
+for (var e in f) {global[e] = f[e]};
+
 var deck = [ {"suit":"clubs","rank":"two"},      {"suit":"clubs","rank":"three"},
              {"suit":"clubs","rank":"four"},     {"suit":"clubs","rank":"five"},
              {"suit":"clubs","rank":"six"},      {"suit":"clubs","rank":"seven"},

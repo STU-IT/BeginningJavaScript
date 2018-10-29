@@ -1,3 +1,6 @@
+var f = require('./practice.js');
+for (var e in f) {global[e] = f[e]};
+
 describe ("#add", function () {
     it ("should add two numbers", function () {
         var result = add(5, 2);
