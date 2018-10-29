@@ -126,5 +126,7 @@ var getHTMLText = function () {
 var isHTMLElement = function () {
 };
 
-module.exports = {isDivisibleBy3, celsToFahr, fahrToCels, randUpTo, randBetween, 
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null)  {      
+    module.exports = {isDivisibleBy3, celsToFahr, fahrToCels, randUpTo, randBetween, 
     isSuit, isRank, isCard, isCapitalized, getHTMLText, isHTMLElement}

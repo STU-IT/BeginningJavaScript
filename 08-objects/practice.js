@@ -82,4 +82,9 @@ var userWithTweetsToDiv = function () {
 var frequencies = function () {
 };
 
-module.exports = {isUser, userToDiv, userWithTweetsToDiv, frequencies};
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null) {      
+    module.exports = {
+        isUser, userToDiv, userWithTweetsToDiv, frequencies
+    }
+};

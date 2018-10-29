@@ -109,10 +109,13 @@ var containsRoyalFlush = function () {
 var highestRank = function () {
 };
 
-module.exports = {
-    isSuit, isRank, isCard, isDeck, createDeck, shuffle,
-    isHand, dealHand, isHigherThan, isLowerThan, highCard, lowCard, containsPair,
-    containsTwoPair, containsThreeOfAKind, containsStraight, containsFlush,
-    containsFullHouse, containsFourOfAKind, containsStraightFlush, containsRoyalFlush,
-    highestRank
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null)  
+{      
+    module.exports = {
+        isSuit, isRank, isCard, isDeck, createDeck, shuffle,
+        isHand, dealHand, isHigherThan, isLowerThan, highCard, lowCard, containsPair,
+        containsTwoPair, containsThreeOfAKind, containsStraight, containsFlush,
+        containsFullHouse, containsFourOfAKind, containsStraightFlush, containsRoyalFlush,
+        highestRank }
 };

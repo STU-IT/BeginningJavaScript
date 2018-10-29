@@ -231,5 +231,9 @@ var removeNonLetters = function () {
 var isPalindrome = function () {
 };
 
-module.exports = {isVowel, isLowerCaseLetter, sumUpTo, sumAToB, countVowels, reverseString,
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null)  
+{      
+    module.exports = {isVowel, isLowerCaseLetter, sumUpTo, sumAToB, countVowels, reverseString,
                     isPrime, sumPrimesUpTo, sumOfFirstNPrimes, removeNonLetters, isPalindrome};
+}

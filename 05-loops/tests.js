@@ -1,5 +1,9 @@
-var f = require('./practice.js');
-for (var e in f) {global[e] = f[e]};
+// for working in nodejs
+if(typeof(require) !== 'undefined' && require != null) {
+    var f = require('./practice.js');
+    for (var e in f) {global[e] = f[e]};
+}
+// for working in nodejs ends
 
 describe("#isVowel", function () {
     it ("should return true if the argument is a vowel, false otherwise", function () {

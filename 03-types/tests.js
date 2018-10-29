@@ -1,5 +1,9 @@
-var f = require('./practice.js');
-for (var e in f) {global[e] = f[e]};
+// for working in nodejs
+if(typeof(require) !== 'undefined' && require != null) {
+    var f = require('./practice.js');
+    for (var e in f) {global[e] = f[e]};
+}
+// for working in nodejs ends
 
 describe("#isDivisibleBy3", function () {
     it ("should return true if the number is divisible by 3, false otherwise", function () {

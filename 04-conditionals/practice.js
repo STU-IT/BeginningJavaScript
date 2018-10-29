@@ -162,8 +162,12 @@ var interjectAt = function () {
 var randomInterject = function () {
 };
 
-module.exports = {passwordStrength, isLeapYear, firstInDictionary, getTagName, improveTweet, isQuestion,
-                    magic8Ball, interjectAt, randomInterject};
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null)  
+{      
+    module.exports = {passwordStrength, isLeapYear, firstInDictionary, getTagName, improveTweet, isQuestion,
+                    magic8Ball, interjectAt, randomInterject}
+}
 
 
 

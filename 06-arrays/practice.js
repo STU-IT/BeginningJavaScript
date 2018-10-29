@@ -201,5 +201,9 @@ var mapToTags = function () {
 var filterToLol = function () {
 };
 
-module.exports = {containsTwice, containsNTimes, atLeastOneEven, allStrings, containsAnyTwice,
-                    getValuesAppearingTwice, range, mapToTags, filterToLol};
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null)  
+{      
+    module.exports = {containsTwice, containsNTimes, atLeastOneEven, allStrings, containsAnyTwice,
+        getValuesAppearingTwice, range, mapToTags, filterToLol};
+}
