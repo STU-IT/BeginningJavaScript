@@ -17,16 +17,7 @@
 //    isVowel("Y");
 //    //=> false
 //
-var isVowel = function (str) {
-    var result = false;
-    var lcStr;
-
-    if (typeof str === "string" && str.length === 1) {
-        lcStr = str.toLowerCase();
-        result = lcStr === "a" || lcStr === "e" || lcStr === "i" ||
-                 lcStr === "o" || lcStr === "u";
-    }
-    return result;
+var isVowel = function () {
 };
 
 
@@ -48,8 +39,7 @@ var isVowel = function (str) {
 //    isLowerCaseLetter(true);
 //    //=> false
 //
-var isLowerCaseLetter = function (str) {
-    return typeof str === "string" && str.length === 1 && "a" <= str && str <= "z";
+var isLowerCaseLetter = function () {
 };
 
 
@@ -69,19 +59,7 @@ var isLowerCaseLetter = function (str) {
 //     sumUpTo(-10);
 //     //=> input must be a zero or a positive number!
 //
-var sumUpTo = function (n) {
-    if (typeof n !== "number" || n < 0) {
-        throw "input must be zero or a positive number!";
-    }
-
-    var sum = 0;
-    var currentNumber = 0;
-
-    for (currentNumber = 0; currentNumber <= n; currentNumber = currentNumber + 1) {
-        sum = sum + currentNumber;
-    }
-
-    return sum;
+var sumUpTo = function () {
 };
 
 
@@ -104,32 +82,7 @@ var sumUpTo = function (n) {
 //     sumAToB("hello", "world");
 //     //=> inputs should be numbers!
 //
-//     sumAToB("hello", "world");
-//     //=> inputs should be numbers!
-//
-var sumAToB = function (a, b) {
-    if (typeof a !== "number" || typeof b !== "number") {
-        throw "inputs should be numbers!";
-    }
-
-    var sum = 0;
-    var start;
-    var end;
-    var number;
-
-    if (a < b) {
-        start = a;
-        end = b;
-    } else {
-        start = b;
-        end = a;
-    }
-
-    for (number = start; number <= end; number = number + 1) {
-        sum = sum + number;
-    }
-
-    return sum;
+var sumAToB = function () {
 };
 
 
@@ -150,21 +103,7 @@ var sumAToB = function (a, b) {
 //     countVowels(true);
 //     //=> input to countVowels must be a string!
 //
-var countVowels = function (str) {
-    if (typeof str !== "string") {
-        throw "input to countVowels must be a string!";
-    }
-
-    var numVowels = 0;
-    var index;
-
-    for (index = 0; index < str.length; index = index + 1) {
-        if (isVowel(str.charAt(index))) {
-            numVowels = numVowels + 1;
-        }
-    }
-
-    return numVowels;
+var countVowels = function () {
 };
 
 
@@ -183,19 +122,7 @@ var countVowels = function (str) {
 //     reverse(true);
 //     //=> input to reverseString must be an string!
 //
-var reverseString = function (str) {
-    if (typeof str !== "string") {
-        throw "input to reverseString must be an string!";
-    }
-
-    var reversed = "";
-    var index;
-
-    for (index = str.length - 1; index >= 0; index = index - 1) {
-        reversed = reversed + str.charAt(index);
-    }
-
-    return reversed;
+var reverseString = function () {
 };
 
 
@@ -222,26 +149,7 @@ var reverseString = function (str) {
 //     isPrime(-101);
 //     //=> false
 //
-var isPrime = function (n) {
-    // assume true until we find evidence to the contrary
-    var result = true;
-    var div;
-
-    if (typeof n !== "number") {
-        result = false;
-    }
-
-    if (n < 2) {
-        result = false;
-    }
-
-    // we'll break out as soon as we find a factor
-    for (div = 2; div < n && result === true; div = div + 1) {
-        if (n % div === 0) {
-            result = false;
-        }
-    }
-    return result;
+var isPrime = function () {
 };
 
 
@@ -263,21 +171,7 @@ var isPrime = function (n) {
 //     sumPrimesUpTo("whatever");
 //     //=> input should be a number
 //
-var sumPrimesUpTo = function (n) {
-    if (typeof n !== "number") {
-        throw "input should be a number";
-    }
-
-    var sum = 0;
-    var number;
-
-    for (number = 0; number <= n; number = number + 1) {
-        if (isPrime(number)) {
-            sum = sum + number;
-        }
-    };
-
-    return sum;
+var sumPrimesUpTo = function () {
 };
 
 
@@ -302,23 +196,7 @@ var sumPrimesUpTo = function (n) {
 //     sumOfFirstNPrimes(-10);
 //     //=> input number should be zero or a positive number!
 //
-var sumOfFirstNPrimes = function (n) {
-    if (typeof n !== "number" || n < 0) {
-        throw "input number should be zero or a positive number!";
-    }
-
-    var primeCount = 0;
-    var sum = 0;
-    var number;
-
-    for (number = 0; primeCount < n; number = number + 1) {
-        if (isPrime(number)) {
-            sum = sum + number;
-            primeCount = primeCount + 1;
-        }
-    }
-
-    return sum;
+var sumOfFirstNPrimes = function () {
 };
 
 
@@ -335,9 +213,6 @@ var sumOfFirstNPrimes = function (n) {
 //      isPalindrome("hello world");
 //      //=> false
 //
-//      isPalindrome(5);
-//      //=> false, a number is not a palindrome
-//
 // Let's start by writing a function to remove all non-letter characters
 // from the input. If the input is not a string, throw an error.
 //
@@ -347,47 +222,13 @@ var sumOfFirstNPrimes = function (n) {
 //     removeNonLetters("this is a string; it has some punctuation!");
 //     //=> thisisastringithassomepunctuation
 //
-//     removeNonLetters(true);
-//     //=> input to removeNonLetters should be a string!
-//
-
-// helper function
-var isLetter = function (str) {
-    return str.length === 1 && ("a" <= str && str <= "z") || ("A" <= str && str <= "Z");
-};
-
-var removeNonLetters = function (str) {
-    if (typeof str !== "string") {
-        throw "input to removeNonLetters should be a string!";
-    }
-
-    var result = "";
-    var index;
-
-    for (index = 0; index < str.length; index = index + 1) {
-        if (isLetter(str.charAt(index))) {
-            result = result + str.charAt(index);
-        }
-    }
-
-    return result;
+var removeNonLetters = function () {
 };
 
 
 // Now use `removeNonLetters`, along with the `reverse` function from above to
 // determine if the string is a palindrome.
-var isPalindrome = function (str) {
-    var result;
-    var onlyLettersLC;
-
-    if (typeof str !== "string") {
-        result = false;
-    } else {
-        onlyLettersLC = removeNonLetters(str).toLowerCase();
-        result = onlyLettersLC === reverseString(onlyLettersLC);
-    }
-
-    return result;
+var isPalindrome = function () {
 };
 
 // for working in nodejs 

@@ -1,8 +1,5 @@
-// (example) Write a function that accepts two number arguments and adds them
-// together.
-var add = function (a, b) {
-    var sum = a + b;
-    return sum;
+// Write a function that accepts two number arguments and returns their sum
+var add = function () {
 };
 
 
@@ -11,9 +8,7 @@ var add = function (a, b) {
 //
 //     var preTaxTotal = totalCost(5, 5.99); // 5 items at 5.99
 //     //=> 29.950000000000003
-var totalCost = function (quantity, price) {
-    var total = quantity * price;
-    return total;
+var totalCost = function () {
 };
 
 
@@ -25,9 +20,7 @@ var totalCost = function (quantity, price) {
 //
 //     cardString("queen", "hearts");
 //     //=> queen of hearts
-var cardString = function (rank, suit) {
-    var cardString = rank + " of " + suit;
-    return cardString;
+var cardString = function () {
 };
 
 
@@ -39,9 +32,7 @@ var cardString = function (rank, suit) {
 //
 //     openTag("div");
 //     //=> <div>
-var openTag = function (tag) {
-    var open = "<" + tag + ">";
-    return open;
+var openTag = function () {
 };
 
 
@@ -53,9 +44,7 @@ var openTag = function (tag) {
 //
 //     closeTag("div");
 //     //=> </div>
-var closeTag = function (tag) {
-    var close = "</" + tag + ">";
-    return close;
+var closeTag = function () {
 };
 
 
@@ -72,9 +61,7 @@ var closeTag = function (tag) {
 //
 // Although I won't be testing for this, your code should re-use the functions that
 // you created in the previous section.
-var toTagString = function (tag, content) {
-    var result = openTag(tag) + content + closeTag(tag);
-    return result;
+var toTagString = function () {
 };
 
 // for working in nodejs

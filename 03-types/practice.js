@@ -1,7 +1,7 @@
 // Write a function called isDivisibleBy3 which returns `true` if a number is
 // divisible by 3, and `false` otherwise.
-var isDivisibleBy3 = function (val) {
-    return val % 3 === 0;
+var isDivisibleBy3 = function () {
+    return true;
 };
 
 
@@ -11,12 +11,10 @@ var isDivisibleBy3 = function (val) {
 // convert the other way, you subtract 32, and then multiply by
 // 5. Finally, you divide by 9. The division operator in JavaScript is
 // `/`.
-var celsToFahr = function (f) {
-    return (9/5) * f + 32;
+var celsToFahr = function () {
 };
 
-var fahrToCels = function (c) {
-    return (c - 32) * (5/9);
+var fahrToCels = function () {
 };
 
 
@@ -34,15 +32,13 @@ var fahrToCels = function (c) {
 //
 //     randUpTo(1000);
 //     //=> 236
-var randUpTo = function (n) {
-    return Math.floor(Math.random() * n);
+var randUpTo = function () {
 };
 
 
 // Write a function called `randBetween` that accepts two numbers representing a
 // range and returns a random whole number between those two numbers.
-var randBetween = function (a, b) {
-    return Math.floor(Math.random() * (b - a) + a);
+var randBetween = function () {
 };
 
 
@@ -61,12 +57,7 @@ var randBetween = function (a, b) {
 //
 //     isSuit("coins");
 //     //=> false
-var isSuit = function (s) {
-    var lowerCaseSuit = s.toLowerCase();
-    return lowerCaseSuit === "hearts" ||
-        lowerCaseSuit === "spades" ||
-        lowerCaseSuit === "clubs" ||
-        lowerCaseSuit === "diamonds";
+var isSuit = function () {
 };
 
 
@@ -82,29 +73,14 @@ var isSuit = function (s) {
 //
 //     isRank("one");
 //     //=> false
-var isRank = function (r) {
-    var lowerCaseRank = r.toLowerCase();
-    return lowerCaseRank === "two" ||
-        lowerCaseRank === "three" ||
-        lowerCaseRank === "four" ||
-        lowerCaseRank === "five" ||
-        lowerCaseRank === "six" ||
-        lowerCaseRank === "seven" ||
-        lowerCaseRank === "eight" ||
-        lowerCaseRank === "nine" ||
-        lowerCaseRank === "ten" ||
-        lowerCaseRank === "jack" ||
-        lowerCaseRank === "queen" ||
-        lowerCaseRank === "king" ||
-        lowerCaseRank === "ace";
+var isRank = function () {
 };
 
 
 // Using the previous two functions, write a function called isCard that accepts
 // two arguments, a rank and a suit, and returns true if they are valid for a card,
 // and false otherwise.
-var isCard = function (r, s) {
-    return isRank(r) && isSuit(s);
+var isCard = function () {
 };
 
 
@@ -113,8 +89,7 @@ var isCard = function (r, s) {
 // Remember that you can use strings in comparisons in the same way that you can
 // use numbers, and the ordering is alphabetical (with capital letters having lower
 // values than their lower-case counterparts).
-var isCapitalized = function (str) {
-    return "A" <= str.charAt(0) && str.charAt(0) <= "Z";
+var isCapitalized = function () {
 };
 
 
@@ -127,8 +102,7 @@ var isCapitalized = function (str) {
 //
 //     getHTMLText("<li>this is a list item</li>");
 //     //=> this is a list item
-var getHTMLText = function (elt) {
-    return elt.substring(elt.indexOf(">")+1, elt.lastIndexOf("</"));
+var getHTMLText = function () {
 };
 
 
@@ -149,10 +123,7 @@ var getHTMLText = function (elt) {
 //
 // It may help in this case to look up the `lastIndexOf` method on the string
 // objects.
-var isHTMLElement = function (str) {
-    var openTag = str.substring(str.indexOf("<") + 1, str.indexOf(">"));
-    var closeTag = str.substring(str.lastIndexOf("</") + 2, str.lastIndexOf(">"));
-    return str.charAt(0) === "<" && str.charAt(str.length - 1) === ">" && openTag === closeTag;
+var isHTMLElement = function () {
 };
 
 // for working in nodejs 
