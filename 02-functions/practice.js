@@ -64,4 +64,9 @@ var closeTag = function () {
 var toTagString = function () {
 };
 
-
+// for working in nodejs
+if(typeof(module) !== 'undefined' && module != null) 
+{ 
+    module.exports = {add, cardString, closeTag, openTag, toTagString, totalCost} 
+};
+// for working in nodejs ends

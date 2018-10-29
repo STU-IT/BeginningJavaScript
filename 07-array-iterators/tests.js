@@ -1,3 +1,10 @@
+// for working in nodejs
+if(typeof(require) !== 'undefined' && require != null) {
+    var f = require('./practice.js');
+    for (var e in f) {global[e] = f[e]};
+}
+// for working in nodejs ends
+
 describe("#reverse", function () {
     it ("should return a new array that is the reverse of the input array", function () {
         expect(reverse([ 1, 2, 3, 4, 5 ])).toEqual([ 5, 4, 3, 2, 1]);

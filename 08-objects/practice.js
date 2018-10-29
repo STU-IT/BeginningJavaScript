@@ -81,3 +81,10 @@ var userWithTweetsToDiv = function () {
 //
 var frequencies = function () {
 };
+
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null) {      
+    module.exports = {
+        isUser, userToDiv, userWithTweetsToDiv, frequencies
+    }
+};

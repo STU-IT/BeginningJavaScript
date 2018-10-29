@@ -128,3 +128,11 @@ var randomArray = function () {
 //
 var randomElements = function () {
 };
+
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null)  
+{      
+    module.exports = {
+        reverse, flatten, sumOfMultiplesOf3And5, atLeastOneVowel, longestAwesomeTweet,elementsToContent, randomArray, randomElements
+    }
+}

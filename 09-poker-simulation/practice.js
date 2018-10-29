@@ -108,3 +108,14 @@ var containsRoyalFlush = function () {
 // three-of-a-kind as well, but a full-house is the highest rank
 var highestRank = function () {
 };
+
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null)  
+{      
+    module.exports = {
+        isSuit, isRank, isCard, isDeck, createDeck, shuffle,
+        isHand, dealHand, isHigherThan, isLowerThan, highCard, lowCard, containsPair,
+        containsTwoPair, containsThreeOfAKind, containsStraight, containsFlush,
+        containsFullHouse, containsFourOfAKind, containsStraightFlush, containsRoyalFlush,
+        highestRank }
+};

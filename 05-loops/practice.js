@@ -230,3 +230,10 @@ var removeNonLetters = function () {
 // determine if the string is a palindrome.
 var isPalindrome = function () {
 };
+
+// for working in nodejs 
+if(typeof(module) !== 'undefined' && module != null)  
+{      
+    module.exports = {isVowel, isLowerCaseLetter, sumUpTo, sumAToB, countVowels, reverseString,
+                    isPrime, sumPrimesUpTo, sumOfFirstNPrimes, removeNonLetters, isPalindrome};
+}

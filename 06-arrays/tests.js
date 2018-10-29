@@ -1,3 +1,10 @@
+// for working in nodejs
+if(typeof(require) !== 'undefined' && require != null) {
+    var f = require('./practice.js');
+    for (var e in f) {global[e] = f[e]};
+}
+// for working in nodejs ends
+
 describe("#containsTwice", function () {
     it ("should return true if the first argument (a value) is contained in the second argument (an array)", function () {
         expect(containsTwice(5, [1, 2, 3, 4, 5])).toBe(false);
